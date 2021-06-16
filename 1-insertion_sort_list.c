@@ -6,7 +6,7 @@
  * @list: is the pointer to the head of the node list.
  * Return: returns a pointer to the exchanged node.
  */
-listint_t *swap(listint_t *current, listint_t **list)
+listint_t *swap_node(listint_t *current, listint_t **list)
 {
 	listint_t *before, *next, *after;
 
@@ -91,11 +91,16 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *head = *list, *aux;
 
+	if (list == NULL)
+	{
+		return;
+	}
+
 	while (head->next != NULL)
 	{
 		if (head->n > head->next->n)
 		{
-			head = swap(head, list);
+			head = swap_node(head, list);
 			aux = head;
 
 			while (aux->prev != NULL)
