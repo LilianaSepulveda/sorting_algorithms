@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap - swaps a node's position.
+ * swap_node - swaps a node's position.
  * @current: is the current node.
  * @list: is the pointer to the head of the node list.
  * Return: returns a pointer to the exchanged node.
